@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import emailjs from 'emailjs-com';
+import MaxWidthWrapper from './MaxWidthWrapper';
 
 interface FormData {
   name: string;
@@ -99,6 +100,7 @@ export default function HeroSection() {
 
       {/* Modal */}
       {isModalOpen && (
+        <MaxWidthWrapper>
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-8 w-full max-w-md relative">
             <button
@@ -171,7 +173,8 @@ export default function HeroSection() {
               </button>
             </form>
           </div>
-        </div>
+          </div>
+        </MaxWidthWrapper>
       )}
     </>
   );
