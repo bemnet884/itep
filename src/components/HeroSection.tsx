@@ -87,7 +87,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Column */}
-          <div className="relative flex justify-center items-center md:block">
+          <div className="hidden relative md:flex justify-center items-center">
             <iframe
               src="https://my.spline.design/lightningbulb-eb51a014009101aed3f430bac39b17b4/"
               className="w-full h-full md:h-[100%] rounded-none md:rounded-lg"
