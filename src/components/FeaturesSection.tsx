@@ -1,4 +1,5 @@
 import { FaLeaf, FaBolt, FaCogs } from 'react-icons/fa';
+import MaxWidthWrapper from './MaxWidthWrapper';
 
 export default function FeaturesSection() {
   const features = [
@@ -21,6 +22,7 @@ export default function FeaturesSection() {
 
   return (
     <section className="py-16 bg-gradient-to-b from-gray-200 via-gray-100 to-white text-center">
+      <MaxWidthWrapper>
       <h2 className="text-4xl font-bold mb-8 text-gray-800">Key Features</h2>
       <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
         Our system is designed to deliver unparalleled energy efficiency, automation, and sustainability.
@@ -41,7 +43,8 @@ export default function FeaturesSection() {
             <p className="text-gray-600 mt-3">{feature.description}</p>
           </div>
         ))}
-      </div>
+        </div>
+      </MaxWidthWrapper>
     </section>
   );
 }
