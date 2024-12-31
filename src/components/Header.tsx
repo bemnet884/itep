@@ -93,13 +93,7 @@ export default function Navbar() {
             >
               What We Do
             </Link>
-            <Link
-              href="/results"
-              className={`hover:text-yellow-400 ${isActive('/results') ? 'text-yellow-400 font-bold' : ''}`}
-              onClick={toggleMobileMenu}
-            >
-              Our Results
-            </Link>
+
             <Link
               href="/insights"
               className={`hover:text-yellow-400 ${isActive('/insights') ? 'text-yellow-400 font-bold' : ''}`}
@@ -107,18 +101,12 @@ export default function Navbar() {
             >
               Insights
             </Link>
-            <Link
-              href="/contact"
-              className={`hover:text-yellow-400 ${isActive('/contact') ? 'text-yellow-400 font-bold' : ''}`}
-              onClick={toggleMobileMenu}
-            >
-              Contact
-            </Link>
+
             <button
               className="px-4 py-2 bg-yellow-500 text-black font-semibold rounded-lg shadow-md hover:bg-yellow-400"
               onClick={toggleMobileMenu}
             >
-              Try it Free
+              Order Now
             </button>
           </nav>
         </div>
