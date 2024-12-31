@@ -18,6 +18,8 @@ export default function HeroSection() {
     location: '',
     message: '',
   });
+  const [modalMessage, setModalMessage] = useState<string>(''); // State for handling success/error messages
+  const [isMessageError, setIsMessageError] = useState<boolean>(false); // State for error/success condition
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -51,17 +53,17 @@ export default function HeroSection() {
       .then(
         (result) => {
           console.log('Email successfully sent:', result.text);
-          alert('Your order has been submitted successfully!');
-          setIsModalOpen(false);
+          setIsMessageError(false); // Indicate no error
+          setModalMessage('Your order has been submitted successfully! We will get back to you shortly.');
           setFormData({ name: '', email: '', location: '', message: '' });
         },
         (error) => {
           console.error('Failed to send email:', error.text);
-          alert('There was an error submitting your order. Please try again.');
+          setIsMessageError(true); // Indicate an error
+          setModalMessage('There was an issue submitting your order. Please try again later or contact support.');
         }
       );
   };
-
 
   return (
     <>
@@ -101,78 +103,85 @@ export default function HeroSection() {
       {/* Modal */}
       {isModalOpen && (
         <MaxWidthWrapper>
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-8 w-full max-w-md relative">
-            <button
-              onClick={toggleModal}
-              className="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
-            >
-              &times;
-            </button>
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <form className="space-y-4" onSubmit={handleSubmit}>
-              <div>
-                <label htmlFor="name" className="block text-gray-700 font-medium">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-yellow-400"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-gray-700 font-medium">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-yellow-400"
-                  placeholder="Your Email"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="location" className="block text-gray-700 font-medium">
-                  Location
-                </label>
-                <input
-                  type="text"
-                  id="location"
-                  value={formData.location}
-                  onChange={handleChange}
-                  className="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-yellow-400"
-                  placeholder="Your Location"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-gray-700 font-medium">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-yellow-400"
-                  placeholder="Your Message"
-                  required
-                ></textarea>
-              </div>
+          <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+            <div className="bg-white rounded-lg p-8 w-full max-w-md relative">
               <button
-                type="submit"
-                className="w-full py-2 px-4 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold rounded-lg transition duration-200"
+                onClick={toggleModal}
+                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
               >
-                Submit
+                &times;
               </button>
-            </form>
-          </div>
+              <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                <div>
+                  <label htmlFor="name" className="block text-gray-700 font-medium">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-yellow-400"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-gray-700 font-medium">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-yellow-400"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="location" className="block text-gray-700 font-medium">
+                    Location
+                  </label>
+                  <input
+                    type="text"
+                    id="location"
+                    value={formData.location}
+                    onChange={handleChange}
+                    className="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-yellow-400"
+                    placeholder="Your Location"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-gray-700 font-medium">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-yellow-400"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full py-2 px-4 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold rounded-lg transition duration-200"
+                >
+                  Submit
+                </button>
+              </form>
+
+              {/* Dynamic Message Display */}
+              {modalMessage && (
+                <div className={`mt-4 p-4 text-center rounded-lg ${isMessageError ? 'bg-red-500 text-white' : 'bg-green-500 text-white'}`}>
+                  {modalMessage}
+                </div>
+              )}
+            </div>
           </div>
         </MaxWidthWrapper>
       )}
