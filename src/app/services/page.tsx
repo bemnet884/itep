@@ -37,16 +37,6 @@ export default function ServicesPage() {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "John Doe",
-      feedback: "The smart automation solutions have revolutionized how we manage lighting in our office. Highly recommended!",
-    },
-    {
-      name: "Jane Smith",
-      feedback: "Thanks to their energy-efficient designs, our energy bills have significantly reduced while staying environmentally friendly.",
-    },
-  ];
 
   return (
     <section className="container mx-auto px-6 py-24 text-gray-800">
