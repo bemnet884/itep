@@ -22,23 +22,7 @@ export default function ResultsSection() {
     },
   ];
 
-  const milestones = [
-    {
-      year: "2022",
-      title: "Project Initiation",
-      details: "Conceptualized and began development of the Smart Light System.",
-    },
-    {
-      year: "2023",
-      title: "Pilot Testing",
-      details: "Conducted prototype testing in residential and industrial settings.",
-    },
-    {
-      year: "2024",
-      title: "Full Deployment",
-      details: "Deployed the system to 30+ homes and received outstanding feedback.",
-    },
-  ];
+
 
   return (
     <section className="container mx-auto px-6 py-24 text-gray-800">
