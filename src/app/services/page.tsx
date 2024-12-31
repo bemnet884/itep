@@ -92,53 +92,7 @@ export default function ServicesPage() {
         ))}
       </motion.div>
 
-      {/* Testimonials Section */}
-      <section className="mt-24">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">What Our Clients Say</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              className="bg-gray-100 rounded-lg shadow-lg p-8 text-center transition-transform transform hover:scale-105"
-              whileHover={{ scale: 1.05 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
-              <p className="text-gray-600 italic mb-6">{testimonial.feedback}</p>
-              <h3 className="text-lg font-bold text-gray-800">{testimonial.name}</h3>
-            </motion.div>
-          ))}
-        </div>
-      </section>
 
-
-      {/* Call-to-Action Section */}
-      <section className="mt-24 text-center">
-        <motion.h2
-          className="text-4xl font-bold mb-6"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Ready to Transform Your Space?
-        </motion.h2>
-        <motion.p
-          className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          Contact us today to learn more about our innovative solutions and how we can help
-          bring your vision to life.
-        </motion.p>
-        <a
-          href="#"
-          className="px-6 py-3 bg-yellow-500 text-white rounded-lg shadow-lg hover:bg-yellow-600 transition-colors"
-        >
-          Get in Touch
-        </a>
-      </section>
     </section>
   );
 }

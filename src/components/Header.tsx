@@ -53,10 +53,6 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* CTA Button */}
-        <button className="hidden md:block px-4 py-2 bg-yellow-500 text-black font-semibold rounded-lg shadow-md hover:bg-yellow-400">
-          Order Now
-        </button>
 
         {/* Mobile Menu Button */}
         <button
@@ -102,12 +98,6 @@ export default function Navbar() {
               Insights
             </Link>
 
-            <button
-              className="px-4 py-2 bg-yellow-500 text-black font-semibold rounded-lg shadow-md hover:bg-yellow-400"
-              onClick={toggleMobileMenu}
-            >
-              Order Now
-            </button>
           </nav>
         </div>
       )}
