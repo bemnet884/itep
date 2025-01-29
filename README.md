@@ -110,17 +110,6 @@ yarn dev
 
 ---
 
-## 💡 **Meet the Team**  
-
-| Name              | Department                 | Role |
-|------------------|--------------------------|------|
-| **[Your Name]**  | Software Engineering      | Developed the website & 3D UI |
-| **Teammate 1**   | Electrical Engineering    | Built the sensor system |
-| **Teammate 2**   | Electrical Engineering    | Designed the smart circuitry |
-| **Teammate 3**   | Product Design            | Created UI/UX and branding |
-
----
-
 ## 📫 **Let's Connect!**  
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/yourprofile)  
