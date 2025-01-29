@@ -1,5 +1,3 @@
-## 📜 **Smart Lighting System – README.md**  
-
 # 💡 Smart Lighting System – University Team Project  
 
 🚀 **An interdisciplinary project where students from different departments collaborated to create an energy-efficient smart lighting system.**  
