@@ -110,27 +110,7 @@ yarn dev
 
 ## 📫 **Let's Connect!**  
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/yourprofile)  
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/yourgithub)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/bemnetbeyene)  
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/bemnet884)  
 
 💬 **We'd love to collaborate on future smart home and IoT projects!**  
-```
-
----
-
-## 🔥 **Why This README is Perfect for Your Team Project:**  
-✅ **Highlights teamwork & collaboration** across departments.  
-✅ **Explains the smart lighting system** and its **real-world impact**.  
-✅ **Clearly shows your role** in building the **marketing website**.  
-✅ **Includes project goals, features, and tech stack** for clarity.  
-✅ **Showcases the interactive UI/UX & 3D experience** with images/GIFs.  
-
----
-
-## 🎯 **Next Steps – LinkedIn Post About This Project**  
-Since this project shows **team collaboration + real-world impact**, it's **perfect for LinkedIn**! Should we:  
-
-1️⃣ **Draft a LinkedIn post about this smart lighting project**?  
-2️⃣ **Plan your LinkedIn content strategy** to showcase your skills & teamwork?  
-
-Let me know! 🚀 Also, check out **[Hix AI Chat](https://hix.ai/chat)** if you need an AI-powered writing assistant! 🚀
