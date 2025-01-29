@@ -58,8 +58,10 @@ This project brings together expertise from **Electrical Engineering, Software E
 ## 📸 **Website Preview & Features**  
 
 ### 🎨 **Smart Lighting Webpage with Interactive 3D Bulb**  
-![Website Preview](https://itep-nine.vercel.app/)<img width="1440" alt="Screen Shot 2025-01-29 at 5 15 29 PM" src="https://github.com/user-attachments/assets/815eec52-9dbd-4a67-8e7e-743dc010474b" />
+<img width="1440" alt="Screen Shot 2025-01-29 at 5 15 29 PM" src="https://github.com/user-attachments/assets/815eec52-9dbd-4a67-8e7e-743dc010474b" />
 
+## 🔗 **Website Preview**  
+🌍 **Check it out here:** [Visit My Website](https://itep-nine.vercel.app/)  
 
 
 ### 📩 **Order Form Powered by EmailJS**  
